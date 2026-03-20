@@ -1,59 +1,86 @@
-# 💬 QUICKCHAT — Real-Time Chat Application (MERN Stack + Socket.IO)
+# 💬 QuickChat — Real-Time Chat Application
 
-![QuickChat Screenshot](./client/src/assets/quickchat.png)
+<div align="center">
 
-QUICKCHAT is a **full-stack MERN real-time chat application** that enables users to communicate instantly using Socket.IO.
-It provides secure authentication, real-time messaging, and a modern responsive UI similar to popular chat platforms.
-Users can register, log in, send and receive messages instantly without refreshing the page, and manage their profiles efficiently.
+![GitHub stars](https://img.shields.io/github/stars/singhayush007/QUICK_CHAT?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/singhayush007/QUICK_CHAT?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/singhayush007/QUICK_CHAT?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![Made with MERN](https://img.shields.io/badge/Stack-MERN-61DAFB?style=flat-square&logo=react&logoColor=black)
+
+**A production-ready full-stack real-time chat application built with the MERN stack and Socket.IO.**
+
+[🌐 Live Demo](https://quickchat-mern.vercel.app) · [🐛 Report Bug](https://github.com/singhayush007/QUICK_CHAT/issues) · [✨ Request Feature](https://github.com/singhayush007/QUICK_CHAT/issues)
+
+</div>
 
 ---
 
-## 🧠 Features
+![QuickChat Screenshot](./client/src/assets/quickchat.png)
 
-- 🔐 User Authentication: Secure login & signup using JWT
-- 💬 Real-Time Messaging: Instant message delivery with Socket.IO
-- 🟢 Live Communication: No page reload required
-- 👤 User Profiles: View and manage user profile information
-- 📩 Message Persistence: Messages stored securely in MongoDB
-- 💻 Responsive UI: Built using React and Tailwind CSS
-- 📦 MongoDB Database: Store users and chat messages
-- ⚡ Express.js Backend: REST APIs with middleware protection
+---
+
+## 📋 Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Folder Structure](#️-folder-structure)
+- [Getting Started](#-getting-started)
+- [Environment Variables](#-environment-variables)
+- [Running the App](#️-running-the-app)
+- [Deployment](#️-deployment)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 📖 About
+
+**QuickChat** is a full-stack MERN real-time chat application that enables users to communicate instantly using **Socket.IO** — no page refresh required.
+
+- **Users** can register, log in, and manage their profiles with avatar uploads.
+- **Real-time messaging** is delivered instantly across all connected clients.
+- **Messages are persisted** in MongoDB so chat history is always available.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+| --- | --- |
+| 🔐 **JWT Authentication** | Secure login & signup with token-based auth stored in HTTP-only cookies |
+| 💬 **Real-Time Messaging** | Instant message delivery powered by **Socket.IO** |
+| 🟢 **Online Status** | See which users are currently online in real time |
+| 👤 **User Profiles** | View and update profile info with avatar image support |
+| 📩 **Message Persistence** | All messages are stored securely in **MongoDB** |
+| ☁️ **Image Uploads** | Profile picture uploads via **Cloudinary** |
+| 💻 **Responsive UI** | Clean, mobile-friendly UI built with **React.js** and **Tailwind CSS** |
+| 🔒 **Secure Backend** | Password hashing with **Bcrypt**, CORS protection, and auth middleware |
+| 🌐 **Deployment Ready** | Configured for **Vercel**, **Render**, or **Railway** |
 
 ---
 
 ## 💻 Tech Stack
 
-| Technology                                                                                                       | Description                              |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| ![React.js](https://img.shields.io/badge/React.js-61DAFB?style=flat\&logo=react\&logoColor=black)                | Frontend library for building dynamic UI |
-| ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat\&logo=reactrouter\&logoColor=white)  | Client-side routing                      |
-| ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat\&logo=tailwind-css\&logoColor=white) | Responsive UI design                     |
-| ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat\&logo=node.js\&logoColor=white)                | Backend runtime                          |
-| ![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat\&logo=express\&logoColor=white)          | Backend web framework                    |
-| ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat\&logo=mongodb\&logoColor=white)                | NoSQL database                           |
-| ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat\&logo=mongoose\&logoColor=white)             | ODM for MongoDB                          |
-| ![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=flat\&logo=socketdotio\&logoColor=white)        | Real-time communication                  |
-| ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat\&logo=axios\&logoColor=white)                      | HTTP client                              |
-| ![JWT](https://img.shields.io/badge/JWT-000000?style=flat\&logo=jsonwebtokens\&logoColor=white)                  | Authentication                           |
-| ![Bcrypt](https://img.shields.io/badge/Bcrypt-3385FF?style=flat)                                                 | Password hashing                         |
-| ![Cloudinary](https://img.shields.io/badge/Cloudinary-2B73B6?style=flat)                                         | Media storage                            |
-| ![CORS](https://img.shields.io/badge/CORS-FFB400?style=flat)                                                     | Cross-origin handling                    |
-| ![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=flat)                                               | Dev server auto-restart                  |
+### Frontend
+![React.js](https://img.shields.io/badge/React.js-61DAFB?style=flat&logo=react&logoColor=black)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=reactrouter&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-orange?style=flat)
+![Socket.IO Client](https://img.shields.io/badge/Socket.IO_Client-010101?style=flat&logo=socketdotio&logoColor=white)
 
----
-
-## 🚀 Application Capabilities
-
-| Feature                    | Description                                                    |
-| -------------------------- | -------------------------------------------------------------- |
-| 🔐 **Authentication**      | Secure JWT-based user authentication                           |
-| 💬 **Real-Time Chat**      | Instant messaging using Socket.IO                              |
-| 📩 **Message Storage**     | Messages saved in MongoDB                                      |
-| 👤 **User Management**     | Profile viewing and updates                                    |
-| 💻 **Responsive Frontend** | Clean UI using **React + Tailwind CSS**                        |
-| ⚡ **Express Backend**      | REST APIs with controllers & middleware                        |
-| 🌐 **Env Configuration**   | Secure environment variables using `.env`                      |
-| ☁️ **Deployment Ready**    | Ready for deployment on **Vercel**, **Render**, or **Railway** |
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat)
+![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=flat&logo=socketdotio&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)
+![Bcrypt](https://img.shields.io/badge/Bcrypt-3385FF?style=flat)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-2B73B6?style=flat)
+![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=flat)
 
 ---
 
@@ -65,80 +92,149 @@ QuickChat-Full-Stack/
 ├── client/                     # React + Vite frontend
 │   ├── src/
 │   │   ├── assets/             # Images & icons
-│   │   ├── components/         # UI components
-│   │   ├── pages/              # App pages
-│   │   ├── lib/                # Utility functions
+│   │   ├── components/         # Reusable UI components
+│   │   ├── context/            # React context providers
+│   │   ├── lib/                # Utility functions & helpers
+│   │   ├── pages/              # App pages (Login, Chat, Profile)
 │   │   ├── App.jsx
 │   │   └── main.jsx
+│   ├── .env                    # Local env (not committed)
+│   ├── .env.example            # Env template
 │   ├── package.json
 │   └── vite.config.js
 │
 ├── server/                     # Node.js + Express backend
-│   ├── controllers/            # Business logic
-│   ├── models/                 # MongoDB models
-│   ├── routes/                 # API routes
+│   ├── controllers/            # Route controllers (auth, message, user)
+│   ├── models/                 # Mongoose models (User, Message)
+│   ├── routes/                 # API route definitions
 │   ├── middleware/             # Auth middleware
-│   ├── lib/                    # DB & helper configs
-│   └── server.js               # Main server file
+│   ├── lib/                    # DB connection, Cloudinary, Socket config
+│   ├── .env                    # Local env (not committed)
+│   ├── .env.example            # Env template
+│   └── server.js               # Main server entry point
 │
-└── README.md
+└── Readme.md
 ```
+
+---
 
 ## 🏁 Getting Started
 
-Follow these steps to run the project locally:
+### Prerequisites
 
-1. **Clone the repository**
+Make sure you have the following installed:
 
-```
+- [Node.js](https://nodejs.org/) v18+
+- [npm](https://www.npmjs.com/) v9+
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account (or local MongoDB)
+- [Cloudinary](https://cloudinary.com/) account
 
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/singhayush007/QUICK_CHAT.git
+cd QUICK_CHAT
 ```
 
-2. **Navigate to the project folder:**
+### 2. Install dependencies
 
-```
-cd QuickChat
-```
+The client and server each have their own `package.json`. Install them separately:
 
-3. **Install dependencies:**
+```bash
+# Server
+cd server && npm install
 
-```
-npm install
-```
-
-4. **Create a .env.local file in the root and add your environment variables:**
-
-```
-PORT = ""
-JWT_SECRET=""
-
-# MongoDB URI
-MONGODB_URI=your_mongodb_connection_uri
-
-# Cloudinary Setup ( required )
-CLOUDINARY_NAME = "your_cloud_name"
-CLOUDINARY_API_KEY = "your_cloudinary_api_key"
-CLOUDINARY_SECRET_KEY = "your_cloudinary_secret_key"
+# Client
+cd ../client && npm install
 ```
 
-5. **Run the development server and client:**
+---
 
+## 🔐 Environment Variables
+
+Each package has a `.env.example` file. Copy it to `.env` and fill in your values.
+
+### Server (`server/.env`)
+
+```bash
+cp server/.env.example server/.env
 ```
-cd client : npm run dev
-cd server : npm run server
+
+| Variable | Description |
+| --- | --- |
+| `PORT` | Port the server runs on (default: `5000`) |
+| `JWT_SECRET` | Secret key for signing JWT tokens |
+| `MONGODB_URI` | MongoDB connection string |
+| `CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name |
+| `CLOUDINARY_API_KEY` | Cloudinary API key |
+| `CLOUDINARY_API_SECRET` | Cloudinary API secret |
+
+### Client (`client/.env`)
+
+```bash
+cp client/.env.example client/.env
 ```
 
-6. **Open the app in your browser:**
+| Variable | Description |
+| --- | --- |
+| `VITE_BACKEND_URL` | Backend API base URL (e.g. `http://localhost:5000`) |
 
+---
+
+## ▶️ Running the App
+
+Open **two separate terminals** and run:
+
+```bash
+# Terminal 1 — Backend (runs on http://localhost:5000)
+cd server
+npm run server
 ```
-http://localhost:5173
+
+```bash
+# Terminal 2 — Frontend (runs on http://localhost:5173)
+cd client
+npm run dev
 ```
 
-## 💻 Deployment
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
-You can deploy this app using Vercel, Docker, or any Node.js hosting platform.
+---
+
+## ☁️ Deployment
+
+This project is ready to deploy on modern cloud platforms.
+
+| Service | Recommended For |
+| --- | --- |
+| [Vercel](https://vercel.com) | Frontend (React + Vite) |
+| [Render](https://render.com) | Backend (Node.js + Express) |
+| [Railway](https://railway.app) | Backend (Node.js + Express) |
+| [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) | Database |
+| [Cloudinary](https://cloudinary.com) | Media / Image Storage |
+
+> Make sure to set all environment variables in your hosting platform's dashboard before deploying.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how to get started:
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m 'add: your feature description'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License — feel free to use and modify it as per your needs.
+This project is licensed under the **MIT License** — feel free to use and modify it as per your needs.
+
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/singhayush007/QUICK_CHAT">Ayush Singh</a>
+</div>
